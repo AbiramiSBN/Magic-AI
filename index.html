@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magic AI</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Background particles -->
+  <div class="bg-particles" id="particles"></div>
+
+  <!-- Main chat interface -->
+  <div class="chat-wrapper">
+    <div class="chat-header">
+      <div class="chat-title">
+        <div class="ai-indicator"></div>
+        Magic AI
+      </div>
+      <button class="mode-toggle" id="mode-toggle">🔍 GPT Mode</button>
+    </div>
+
+    <div class="messages-container" id="messages"></div>
+
+    <div class="typing-indicator" id="typing">
+      <span>Magic AI is thinking</span>
+      <div class="typing-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="input-container" id="input-container">
+      <input type="text" class="input-field" id="user-input" placeholder="Ask me anything or search the web...">
+      <button class="send-btn" id="send-btn">➤</button>
+    </div>
+
+    <div class="action-buttons">
+      <button class="action-btn" id="add-question">➕ Add Knowledge</button>
+      <button class="action-btn" id="view-questions">📚 View Knowledge</button>
+      <button class="action-btn" id="calculator">🧮 Calculator</button>
+      <button class="action-btn" id="clear-chat">🗑️ Clear Chat</button>
+    </div>
+  </div>
+
+  <!-- Modal for viewing questions -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Knowledge Base</h2>
+        <button class="close-btn" id="close-modal">✕</button>
+      </div>
+      <div class="modal-content">
+        <input type="text" class="search-input" id="modal-search" placeholder="Search knowledge base...">
+        <div id="questions-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
